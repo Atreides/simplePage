@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*font-family: 'Roboto', sans-serif;*/
+
+
+/* общие настройки */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	color: #000;
+}
+
+body {
+	font-family: Roboto, Arial, sans-serif;
+	direction: ltr;
+}
+	/* for old IE */
+main {
+	display: block;
+}
+
+img {
+	border: 0;
+	vertical-align: top;
+	/*width: 200px;*/
+}
+
+.two-columns-elements-of-equal-width__container,
+.three-columns-elements-of-equal-width__container {
+	display: flex;
+	justify-content: space-between;
+	/*border: 2px solid #000;*/
+}
+
+.two-columns-elements-of-equal-width__element {
+	width: calc(50% - 10px);
+	display: inline-block; /* for old IE */
+	/*border: 2px solid #000;*/
+}
+
+.three-columns-elements-of-equal-width__element {
+	width: calc(100% / 3 - 40px / 3);
+	display: inline-block; /* for old IE */
+	/*border: 2px solid #000;*/
+}
+
+.margin-bottom-50px {
+	margin-bottom: 50px;
+}
+
+.background-f1f1f1 {
+	background: #f1f1f1;
+}
+
+.font-size-24px {
+	font-size: 24px;
+}
+
+.opacity60\% {
+	opacity: 0.6;
+}
+
+.background-616161 {
+	background: #616161;
+}
+
+.color-white {
+	color: #fff;
+}
+
+.background-f44336 {
+	background: #f44336;
+}
+
+.background-white {
+	background: #fff;
+}
+
+.display-block {
+	display: block;
+}
+
+/* общие настройки */
+
+#root {
+	min-width: 940px;
+}
+
+header {
+	width: 300px;
+	box-sizing: border-box;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background: #f44336;
+	padding: 40px 15px 0 15px;
+	z-index: 10;
+}
+
+#logo {
+	display: block;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+#logo:hover {
+	text-decoration: underline;
+}
+
+.humburger-icon_image-top {
+	display: none;
+}
+
+.main-menu {
+	position: absolute;
+	width: 270px;
+	top: 80px;
+	right: 15px;
+	list-style: none;
+	/*border: 1px solid #000;*/
+}
+
+.main-menu a {
+	display: block;
+	padding: 8px 15px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.main-menu a:hover {
+	color: #000;
+	background: #fff;
+}
+
+main {
+	margin: 0 40px 0 340px;
+	padding-top: 30px;
+}
+
+#block-one {
+
+}
+
+h1 {
+	font-size: 48px;
+	margin: 16px 0;
+}
+
+/*Для всех h2 единое оформление*/
+
+h2 {
+	font-size: 32px;
+	margin: 16px 0;
+	color: #f44336;
+}
+
+h2:after {
+	width: 65px;
+	height: 6px;
+	display: block;
+	content: "";
+	border-radius: 5px;
+	margin-top: 10px;
+	background: #f00;
+}
+
+.our-work-photo {
+
+}
+
+.our-work-photo img {
+	opacity: .8;
+	cursor: pointer;
+	width: 100%;
+}
+/*для всех картинок, кроме последней*/
+.our-work-photo img:not(:last-child){
+	padding-bottom: 20px;
+}
+
+.our-work-photo img:hover {
+	opacity: 1;
+}
+
+#block-two {
+
+}
+
+/* для всех P единое оформление*/
+
+p {
+	margin: 16px 0;
+
+}
+
+.about-designers-content img {
+	width: 100%;
+	filter: grayscale(75%);
+}
+
+.packages-version {
+	background: #f1f1f1;
+	list-style: none;
+	text-align: center;
+
+}
+
+.packages-version li {
+	padding: 16px 0;
+	border-bottom: 1px solid #ddd;
+}
+
+.packages-version button {
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+}
+
+.packages-version button:hover {
+	background: #000;
+	color: #fff;
+}
+
+#block-five {
+
+}
+
+form {
+
+}
+
+form input,
+form textarea {
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+	padding: 8px;
+	margin-bottom: 16px;
+}
+
+form textarea {
+	height: 70px;
+	resize: none;
+}
+
+form input[type="submit"]{
+	text-align: center;
+	color: #fff;
+	border: none;
+	padding: 12px 24px;
+	cursor: pointer;
+	background: #f44336;
+}
+
+form input[type="submit"]:hover {
+	/*color: #fff;*/
+	background: #ccc;
+}
+
+#block-six {
+	padding: 16px;
+	text-align: right;
+	background: #f1f1f1;
+}
+
+.horizontalMenu li {
+	display: inline;
+
+}
+
+.horizontalMenu li:not(:last-child):after {
+	content: " | ";
+	padding: 0 8px;
+}
+
+.horizontalMenu a {
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.horizontalMenu a:hover {
+	text-decoration:underline;
+}
+
+@media (max-width: 576px) {
+	#root {
+		min-width: 300px;
+		padding: 0 10px;
+	}
+
+	header {
+		width: auto;
+		height: 70px;
+		position: relative;
+		padding: 20px 0 0;
+	}
+
+	#logo {
+		text-align: center;
+		margin-right: 50px;
+	}
+
+	#logo:hover {
+		text-decoration: none;
+	}
+
+	/*оформление меню - начало*/
+
+	.humburger-icon_image-top {
+		position: absolute;
+		display: block;
+		right: 10px;
+		top: 10px;
+		width: 50px;
+		height: 50px;
+		background: url(images/hamburger-icon-50x100px.png) left top;
+		cursor: pointer;
+	}
+
+	.humburger-icon_image-bottom {
+		background-position: left bottom;
+	}
+
+	.main-menu {
+		width: 100%;
+		top: 75px;
+		right: 0px;
+		z-index: 9999;
+	}
+
+	.main-menu_hidden-for-mobile {
+		display: none;
+	}
+
+	.main-menu a {
+		text-decoration: underline;
+		background: #f44336;
+		user-select: none;
+		text-align: center;
+	}
+
+	.main-menu a:hover {
+		background: #f44336;
+		color: #fff;
+	}
+
+	/*оформление меню - завершение*/
+
+	.two-columns-elements-of-equal-width__container,
+	.three-columns-elements-of-equal-width__container {
+		display: block;
+	}
+
+	.two-columns-elements-of-equal-width__element,
+	.three-columns-elements-of-equal-width__element {
+		width: auto;
+		display: block;
+	}
+
+	.two-columns-elements-of-equal-width__element:not(:last-child),
+	.three-columns-elements-of-equal-width__element:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	main {
+		margin: 0;
+	}
+	
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+
+
+}
